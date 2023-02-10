@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="550.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReportsScreen">
+    <children>
+        <TableView fx:id="contactScheduleTableView" layoutX="25.0" layoutY="59.0" prefHeight="200.0" prefWidth="1050.0">
+            <columns>
+                <TableColumn fx:id="reportsAppointmentId" prefWidth="131.25" text="Aptt ID" />
+                <TableColumn fx:id="reportsTitle" prefWidth="131.25" text="Title" />
+                <TableColumn fx:id="reportsType" prefWidth="131.25" text="Type" />
+                <TableColumn fx:id="reportsDescription" prefWidth="131.25" text="Description" />
+                <TableColumn fx:id="reportsLocation" prefWidth="131.25" text="Location" />
+                <TableColumn fx:id="reportsStart" prefWidth="131.25" text="Start" />
+                <TableColumn fx:id="reportsEnd" prefWidth="131.25" text="End" />
+                <TableColumn fx:id="reportsCustomerId" prefWidth="131.25" text="Customer ID" />
+            </columns>
+        </TableView>
+        <ButtonBar layoutX="868.0" layoutY="522.0" prefHeight="40.0" prefWidth="200.0">
+            <buttons>
+                <Button fx:id="reportsBackBtn" mnemonicParsing="false" onAction="#OnActionBackBtn" text="Back" />
+            </buttons>
+        </ButtonBar>
+        <TableView fx:id="totalCustomerApptByMonthTypeTableView" layoutX="25.0" layoutY="322.0" prefHeight="200.0" prefWidth="450.0">
+            <columns>
+                <TableColumn fx:id="reportsByType" prefWidth="150.0" text="Appointment Type" />
+                <TableColumn fx:id="reportsByMonth" prefWidth="150.0" text="Appointment Month" />
+                <TableColumn fx:id="reportsByTotal" prefWidth="150.0" text="Total Appointments" />
+            </columns>
+        </TableView>
+      <TableView fx:id="appointmentsByContactYearTableView" layoutX="618.0" layoutY="322.0" prefHeight="200.0" prefWidth="450.0">
+         <columns>
+            <TableColumn fx:id="reportsContactCol" prefWidth="162.0" text="Appointment Contact" />
+            <TableColumn fx:id="reportsContactYearCol" prefWidth="138.0" text="Appointment Year" />
+            <TableColumn fx:id="reportsAppointmentsByYearTotalCol" prefWidth="150.0" text="Appointment Total" />
+         </columns>
+      </TableView>
+      <ComboBox fx:id="reportsContactCb" layoutX="926.0" layoutY="17.0" onAction="#onActionContactCb" prefWidth="150.0" />
+      <Label fx:id="reportsSelectContact" layoutX="808.0" layoutY="21.0" text="Select A Contact" />
+      <Label fx:id="reports" layoutX="25.0" layoutY="10.0" text="Reports">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Separator layoutY="278.0" prefHeight="17.0" prefWidth="1101.0" />
+      <Separator layoutX="543.0" layoutY="284.0" orientation="VERTICAL" prefHeight="276.0" prefWidth="16.0" />
+      <Label layoutX="25.0" layoutY="295.0" prefHeight="17.0" prefWidth="266.0" text="Appointments by Type &amp; Month &amp; Total" />
+      <Label layoutX="618.0" layoutY="295.0" prefHeight="17.0" prefWidth="300.0" text="Appointments by Contact &amp; Year &amp; Total" />
+    </children>
+</AnchorPane>

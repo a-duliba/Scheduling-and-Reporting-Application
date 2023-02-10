@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginScreen">
+   <children>
+      <GridPane layoutX="14.0" layoutY="50.0" prefHeight="137.0" prefWidth="354.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="userNameLbl" text="Username">
+               <GridPane.margin>
+                  <Insets left="70.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="passwordLbl" text="Password" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="70.0" />
+               </GridPane.margin>
+            </Label>
+            <TextField fx:id="userNameTxt" GridPane.columnIndex="1" />
+            <TextField fx:id="passwordTxt" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+      <HBox alignment="CENTER_LEFT" layoutX="82.0" layoutY="218.0" prefHeight="75.0" prefWidth="437.0">
+         <children>
+            <Button fx:id="loginBtn" mnemonicParsing="false" onAction="#onActionLoginBtn" text="Login" />
+            <Button fx:id="closeBtn" mnemonicParsing="false" onAction="#onActionCloseBtn" text="Close">
+               <HBox.margin>
+                  <Insets left="61.0" />
+               </HBox.margin></Button>
+         </children>
+      </HBox>
+      <GridPane layoutX="82.0" layoutY="287.0" prefHeight="75.0" prefWidth="285.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="timeZoneLbl" text="Time Zone" />
+            <Label GridPane.columnIndex="1" />
+            <Label fx:id="countryZoneLbl" prefHeight="17.0" prefWidth="140.0" text="Auto-Generated" GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+      <Label fx:id="loginLbl" layoutX="256.0" layoutY="23.0" text="Login">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="errorMessageTxt" layoutX="191.0" layoutY="192.0" prefHeight="17.0" prefWidth="285.0" />
+   </children>
+</AnchorPane>
